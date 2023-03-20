@@ -9,6 +9,7 @@ function Card({ hotel }) {
     <div className={styles.hotel}>
       <img src={hotel.photo} className={styles.img} alt={hotel.name} />
       <span className={styles.name}>{hotel.name}</span>
+      <span className={styles.name}>{hotel.description}</span>
       <button onClick={reservar} >Reservar</button>
     </div>
   );
