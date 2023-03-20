@@ -1,0 +1,16 @@
+.hotel {
+  border: solid 1px black;
+  width: 32%;
+  /* height: 300px; */
+  margin-bottom: 10px;
+}
+
+.img {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.name {
+  font-size: 12px;
+  display: block;
+}
