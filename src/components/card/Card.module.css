@@ -1,16 +1,62 @@
 .hotel {
   border: solid 1px black;
   width: 32%;
-  /* height: 300px; */
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .img {
   margin-top: 5px;
-  width: 100%;
+  width: 95%;
+  margin: 5px 10px;
+  border-radius: 5px;
 }
 
-.name {
-  font-size: 12px;
+.text {
+  font-size: 14px;
   display: block;
+  margin: 10px;
+  text-align: justify;
+}
+
+.title{
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.date{
+  font-size: 16px;
+    font-weight: bold;
+    display: block;
+    color: aliceblue;
+    background-color: rgb(112, 207, 112);
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.rooms{
+  display: flex;
+    height: 30px;
+    width: 48%;
+    color: aliceblue;
+    background-color: rgb(112, 207, 112);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.price_rooms{
+  display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.btn {
+  margin: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: rgba(227, 172, 52, 0.799);
 }
