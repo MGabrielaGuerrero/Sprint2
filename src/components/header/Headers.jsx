@@ -17,6 +17,7 @@ function Header() {
           <option value="">Français</option>
           <option value="">Português</option>
         </select>
+        <span>IDIOMA</span>
         <ul>
           <li>Anunciar un hotel</li>
           <li>Ayuda</li>

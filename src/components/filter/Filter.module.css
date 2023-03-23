@@ -1,9 +1,24 @@
 .div {
-  background-color: rgb(43, 97, 222);
+  height: 120px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  
+}
+.contenedor{
+  background-color: rgb(39, 119, 14);
+  width: 80%;
+  margin-left: 10%;
+  height: 90px;
+  padding: 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
 }
 
 .btnLimpiar {
-  background-color: rgba(227, 105, 52, 0.799);
+  background-color: rgba(246, 88, 26, 0.799);
    font-size: 20px;
    color: white;
    font-weight: bold;
@@ -11,4 +26,28 @@
    padding: 5px 10px;
    border-radius: 5px;
    cursor: pointer;
+}
+
+.contenedor select{
+  height: 40px;
+  border-radius: 10px;
+  width:100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.contenedor input{
+  height: 40px;
+  border-radius: 10px;
+  width:100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.contenedor div{
+  width: 16%;
+  align-items: center;
+}
+
+.contenedor span{
+  font-size: 14px;
+  color:  white;
 }

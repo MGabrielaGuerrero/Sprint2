@@ -1,4 +1,5 @@
 .hotel {
+
   border: solid 1px black;
   width: 32%;
   margin-bottom: 10px;
@@ -13,6 +14,7 @@
 }
 
 .text {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 14px;
   display: block;
   margin: 10px;
@@ -20,6 +22,7 @@
 }
 
 .title{
+  font-family:Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   font-weight: bold;
   display: block;
@@ -28,12 +31,16 @@
 .date{
   font-size: 16px;
     font-weight: bold;
-    display: block;
+    display: flex;
     color: aliceblue;
-    background-color: rgb(112, 207, 112);
+    background-color: rgb(39, 119, 14);
     height: 30px;
     margin: 5px;
     border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+  
 }
 
 .rooms{
@@ -41,7 +48,7 @@
     height: 30px;
     width: 48%;
     color: aliceblue;
-    background-color: rgb(112, 207, 112);
+    background-color: rgb(39, 119, 14);
     border-radius: 5px;
     justify-content: center;
     align-items: center;
@@ -54,9 +61,12 @@
 }
 
 .btn {
+  font-family:Georgia, 'Times New Roman', Times, serif;
   margin: 10px;
     width: 100px;
     height: 30px;
     border-radius: 5px;
     background-color: rgba(227, 172, 52, 0.799);
+    border: 0;
+    font-weight: 700;
 }
