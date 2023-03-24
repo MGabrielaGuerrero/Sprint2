@@ -21,7 +21,7 @@ function Card({ hotel }) {
       <span className={styles.date}>{ `Desde: ${parserData(hotel.availabilityFrom)}`}</span>
       <span className={styles.date}>{ `Hasta: ${parserData(hotel.availabilityTo)}`}</span>
       <div className={styles.price_rooms}>
-        <span className={styles.rooms}> <FontAwesomeIcon icon={faBed} /> {` ${hotel.rooms} Habitaciones`} </span>
+        <span className={styles.rooms}> <FontAwesomeIcon icon={faBed} />  {` ${hotel.rooms} Habitaciones`} </span>
         <span className={styles.rooms}> {"$".repeat(hotel.price)}  </span>
       </div>
       <button className={styles.btn} onClick={reservar} >Reservar</button>

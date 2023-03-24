@@ -3,16 +3,30 @@ import styles from "./Filter.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-function Filter() {
+function Filter({dateFrom, dateTo, setDateFrom, setDateTo}) {
+
+  const dateFromFilter = (e)=>{
+    setDateFrom(e.target.value)
+  }
+
+  const dateToFilter = (e)=>{
+    setDateTo(e.target.value)
+  }
+
+  const clear = () =>{
+    setDateFrom("")
+    setDateTo("")
+  }
+
   return (
     <div className={styles.div}>
       <div className={styles.contenedor}>
         <div>
-          <input type="date" name="" id="" />
+          <input value={dateFrom} type="date" name="" id="" onChange={dateFromFilter} />
           <span>Fecha desde</span>
         </div>
         <div>
-          <input type="date" name="" id="" />
+          <input value={dateTo} type="date" name="" id="" onChange={dateToFilter} />
           <span>Fecha hasta</span>
         </div>
         <div>
@@ -44,7 +58,7 @@ function Filter() {
           </select>
           <span>Precio</span>
         </div>
-        <button className={styles.btnLimpiar} > <FontAwesomeIcon icon={faTrash} />Limpiar</button>
+        <button className={styles.btnLimpiar}  onClick= {clear}> <FontAwesomeIcon icon={faTrash} />Limpiar</button>
       </div>
     </div>
   );

@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./Cards.module.css";
 import Card from "../card/Card";
 
-function Cards({ hotelsData }) {
+function Cards({ hotelsNew }) {
   return (
     <main>
       <h1 className={styles.titulo}>Hoteles</h1>
       <div className={styles.hotels}>
-        {hotelsData.map((hotel) => (
+        {hotelsNew.map((hotel) => (
           <Card key={hotel.slug} hotel={hotel} />
         ))}
       </div>
