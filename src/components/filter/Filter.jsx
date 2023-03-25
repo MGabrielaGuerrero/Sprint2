@@ -3,21 +3,39 @@ import styles from "./Filter.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-function Filter({dateFrom, dateTo, setDateFrom, setDateTo}) {
 
-  const dateFromFilter = (e)=>{
+function Filter({ dateFrom, dateTo, sizeHotels, countryHotel, priceHotel, setDateFrom, setDateTo, setSizeHotels, setCountryHotel, setPriceHotel}) {
+
+
+  const dateFromFilter = (e) => {
     setDateFrom(e.target.value)
   }
 
-  const dateToFilter = (e)=>{
+  const dateToFilter = (e) => {
     setDateTo(e.target.value)
   }
 
-  const clear = () =>{
+  const sizeFilter = (e) => {
+    setSizeHotels(e.target.value);
+
+  }
+  const countryFilter = (e) => {
+    setCountryHotel(e.target.value);
+
+  }
+  const priceFilter = (e) =>{
+    setPriceHotel(e.target.value);
+  }
+  const clear = () => {
     setDateFrom("")
     setDateTo("")
+    
+    setCountryHotel("todos")
+    setPriceHotel("todos")
+    setSizeHotels("todos")
   }
 
+  
   return (
     <div className={styles.div}>
       <div className={styles.contenedor}>
@@ -30,35 +48,35 @@ function Filter({dateFrom, dateTo, setDateFrom, setDateTo}) {
           <span>Fecha hasta</span>
         </div>
         <div>
-          <select name="country" id="">
+          <select value={countryHotel} name="countryselect" id="" onChange={countryFilter}>
             <option value="todos">Todos</option>
-            <option value="argentina">Argentina</option>
-            <option value="brasil">Brasil</option>
-            <option value="chile">Chile</option>
-            <option value="uruguay">Uruguay</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Chile">Chile</option>
+            <option value="Uruguay">Uruguay</option>
           </select>
           <span>Pais</span>
         </div>
         <div>
-          <select name="tamano" id="">
+          <select value={sizeHotels} name="tamano" id="" onChange={sizeFilter}>
             <option value="todos">Todos</option>
             <option value="grande">Grande</option>
             <option value="mediano">Mediano</option>
-            <option value="pequeño">pequeño</option>
+            <option value="pequeño">Pequeño</option>
           </select>
           <span>Tamaño</span>
         </div>
         <div>
-          <select name="precio" id="">
+          <select value={priceHotel} name="precio" id="" onChange={priceFilter}>
             <option value="todos">Todos</option>
-            <option value="promocion">$</option>
-            <option value="economico">$$</option>
-            <option value="clase">$$$</option>
-            <option value="lujoso">$$$$</option>
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+            <option value="4">$$$$</option>
           </select>
           <span>Precio</span>
         </div>
-        <button className={styles.btnLimpiar}  onClick= {clear}> <FontAwesomeIcon icon={faTrash} />Limpiar</button>
+        <button className={styles.btnLimpiar} onClick={clear}> <FontAwesomeIcon icon={faTrash} />Limpiar</button>
       </div>
     </div>
   );
