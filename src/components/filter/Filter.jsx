@@ -44,7 +44,7 @@ function Filter({ dateFrom, dateTo, sizeHotels, countryHotel, priceHotel, setDat
           <span>Fecha desde</span>
         </div>
         <div>
-          <input value={dateTo} type="date" name="" id="" onChange={dateToFilter} />
+          <input value={dateTo} min={dateFrom} type="date" name="" id="" onChange={dateToFilter} />
           <span>Fecha hasta</span>
         </div>
         <div>

@@ -1,7 +1,7 @@
 .hotel {
-
   border: solid 1px black;
   width: 32%;
+  height: 610px;
   margin-bottom: 10px;
   border-radius: 5px;
 }
@@ -14,59 +14,59 @@
 }
 
 .text {
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 14px;
   display: block;
   margin: 10px;
   text-align: justify;
+  height: 100px;
 }
 
-.title{
-  font-family:Georgia, 'Times New Roman', Times, serif;
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   font-weight: bold;
   display: block;
 }
 
-.date{
+.date {
   font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    color: aliceblue;
-    background-color: rgb(39, 119, 14);
-    height: 30px;
-    margin: 5px;
-    border-radius: 5px;
-    text-align: center;
-    justify-content: center;
-    padding: 5px;
-  
+  font-weight: bold;
+  display: flex;
+  color: aliceblue;
+  background-color: rgb(39, 119, 14);
+  height: 30px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+
 }
 
-.rooms{
+.rooms {
   display: flex;
-    height: 30px;
-    width: 48%;
-    color: aliceblue;
-    background-color: rgb(39, 119, 14);
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
+  height: 30px;
+  width: 48%;
+  color: aliceblue;
+  background-color: rgb(39, 119, 14);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
-.price_rooms{
+.price_rooms {
   display: flex;
-    justify-content: space-around;
-    margin: 10px;
+  justify-content: space-around;
+  margin: 10px;
 }
 
 .btn {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  margin: 10px;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: rgba(227, 172, 52, 0.799);
-    border: 0;
-    font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgba(227, 172, 52, 0.799);
+  border: 0;
+  font-weight: 700;
 }
