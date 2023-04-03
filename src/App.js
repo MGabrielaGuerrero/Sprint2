@@ -2,6 +2,7 @@ import './styles.css'
 import Header from './components/header/Headers'
 import Filter from './components/filter/Filter'
 import Cards from './components/cards/Cards'
+import Alerta from './components/alerta/Alerta'
 import { hotelsData } from './statics/data'
 import { useState } from 'react'
 
@@ -12,6 +13,7 @@ export default function App() {
   const [sizeHotels, setSizeHotels] = useState("todos");
   const [countryHotel, setCountryHotel] = useState("todos")
   const [priceHotel, setPriceHotel] = useState("todos")
+  const [rooms,setRooms] = useState("")
 
   const hotelesFilter = (hotelsData) => {
     const hotelesFilterData = hotelsData.filter((hotelData) => {
@@ -43,8 +45,8 @@ export default function App() {
         }
         return hotelData;
       })
-      .filter((hotelData)=>{
-        if (priceHotel !== "todos"){
+      .filter((hotelData) => {
+        if (priceHotel !== "todos") {
           return hotelData.price === Number(priceHotel)
         }
         return hotelData;
@@ -52,10 +54,21 @@ export default function App() {
     return hotelesFilterData
   }
 
-  const hotelsNew = hotelesFilter(hotelsData)
-  console.log('🚀 ~ file: App.js:29 ~ App ~ hotelsNew:', hotelsNew)
+  let hotelsNew = hotelesFilter(hotelsData)
 
-
+  const reservarHabitacion = (hotelsNew) => {
+    if (rooms) {
+      return hotelsNew.map((reservar,index) => {
+        if (reservar.slug == rooms) {
+          reservar.rooms= reservar.rooms-1
+        }
+        return reservar
+      })
+    } else {
+      return hotelsNew
+    }
+  }
+  hotelsNew = reservarHabitacion(hotelsNew);
   return (
     <div className="App">
       <Header />
@@ -69,9 +82,18 @@ export default function App() {
         setDateTo={setDateTo}
         setSizeHotels={setSizeHotels}
         setCountryHotel={setCountryHotel}
-        setPriceHotel={ setPriceHotel}
+        setPriceHotel={setPriceHotel}
       />
-      <Cards hotelsNew={hotelsNew} />
+      {hotelsNew.length === 0 ? (
+        <Alerta />
+      ) : (
+        <Cards
+          hotelsNew={hotelsNew}
+          rooms={rooms}
+          setRooms={setRooms}
+        />
+      )
+      }
     </div>
   )
 }
